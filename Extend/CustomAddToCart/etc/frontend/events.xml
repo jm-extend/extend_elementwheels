@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * Extend Warranty
+ *
+ * @author      Extend Magento Team <magento@extend.com>
+ * @category    Extend
+ * @package     Warranty
+ * @copyright   Copyright (c) 2021 Extend Inc. (https://www.extend.com/)
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Event/etc/events.xsd">
+    <event name="checkout_cart_add_product_complete">
+        <observer name="extend_warranty_observer_warranty_add_to_cart"
+                  instance="Extend\Warranty\Observer\Warranty\AddToCart" disabled="true" />
+        <observer name="custom_extend_warranty_observer_warranty_add_to_cart"
+                  instance="Extend\CustomAddToCart\Observer\AddToCart" />
+
+    </event>
+</config>
